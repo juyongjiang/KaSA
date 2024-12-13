@@ -14,14 +14,11 @@ It is worth noting that our implementation is version-agnostic regarding PEFT. W
 > If you use the data or code in this repo, please consider citing the following paper: 
 
 ```BibTex
-@misc{wang2024kasaknowledgeawaresingularvalueadaptation,
-      title={KaSA: Knowledge-Aware Singular-Value Adaptation of Large Language Models}, 
-      author={Fan Wang and Juyong Jiang and Chansung Park and Sunghun Kim and Jing Tang},
-      year={2024},
-      eprint={2412.06071},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2412.06071}, 
+@article{wang2024kasa,
+  title={KaSA: Knowledge-Aware Singular-Value Adaptation of Large Language Models},
+  author={Wang, Fan and Jiang, Juyong and Park, Chansung and Kim, Sunghun and Tang, Jing},
+  journal={arXiv preprint arXiv:2412.06071},
+  year={2024}
 }
 ```
 
