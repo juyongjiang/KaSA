@@ -167,13 +167,13 @@ def print_trainable_parameters(model):
     all_param = 0
     for name, param in model.named_parameters():
         if 'lora_diag' in name:
-            all_param += int(math.sqrt(param.numel()))
+            all_param += int(param.numel())
         elif 'classifier' not in name:    
             all_param += param.numel()
         if param.requires_grad and 'classifier' not in name:
             if 'lora_diag' in name:
-                print(name, int(math.sqrt(param.numel())))
-                trainable_params += int(math.sqrt(param.numel()))
+                print(name, int(param.numel()))
+                trainable_params += int(param.numel())
             else:
                 print(name, param.numel())
                 trainable_params += param.numel()

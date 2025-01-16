@@ -127,7 +127,7 @@ class LoraLayer(BaseTunerLayer):
         else:
             self.scaling[adapter_name] = lora_alpha / r
         # kasa
-        self.lora_diag[adapter_name] = torch.diag(nn.Parameter(torch.randn(r), requires_grad=True))
+        self.lora_diag[adapter_name] = nn.Parameter(torch.randn(r), requires_grad=True)
         
         weight = self.get_base_layer().weight
         dtype = weight.dtype
@@ -560,7 +560,7 @@ class Linear(nn.Module, LoraLayer):
             weight_A = weight_A.float()
             weight_B = weight_B.float()
 
-        output_tensor = transpose(weight_B @ self.lora_diag[adapter] @ weight_A, self.fan_in_fan_out) * self.scaling[adapter]
+        output_tensor = transpose(weight_B @ torch.diag(self.lora_diag[adapter]) @ weight_A, self.fan_in_fan_out) * self.scaling[adapter]
 
         if cast_to_fp32:
             output_tensor = output_tensor.to(dtype=dtype)
@@ -594,7 +594,7 @@ class Linear(nn.Module, LoraLayer):
                 dropout = self.lora_dropout[active_adapter]
                 scaling = self.scaling[active_adapter]
                 
-                diag = self.lora_diag[active_adapter]
+                diag = torch.diag(self.lora_diag[active_adapter])
                 
                 x = x.to(lora_A.weight.dtype)
 

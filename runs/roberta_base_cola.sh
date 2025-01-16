@@ -4,7 +4,7 @@ mkdir -p logs/roberta-base
 
 
 # variables
-CUDA_DEVICE=2
+CUDA_DEVICE=3
 
 MODEL_NAME_OR_PATH="roberta-base"
 
