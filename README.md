@@ -127,14 +127,14 @@ print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
 > The running logs and results of all our experiments are saved in the [<span style="color:red">logs</span>](./logs/) path. The following is an example.
 
 ```bash
-epoch 0: {'matthews_correlation': 0.0} , current_best_corr: 0.0 train_loss: 0.508760929107666
-epoch 1: {'matthews_correlation': 0.4213272367274183} , current_best_corr: 0.4213272367274183 train_loss: 0.28423798084259033
-epoch 2: {'matthews_correlation': 0.5234928415614652} , current_best_corr: 0.5234928415614652 train_loss: 0.3484842777252197
+epoch 0: {'matthews_correlation': 0.0} , current_best_corr: 0.0 train_loss: 0.5064952373504639
+epoch 1: {'matthews_correlation': 0.4528085001256977} , current_best_corr: 0.4528085001256977 train_loss: 0.2968645691871643
+epoch 2: {'matthews_correlation': 0.5314083843246411} , current_best_corr: 0.5314083843246411 train_loss: 0.3451506495475769
 ...
-epoch 96: {'matthews_correlation': 0.630705998012026} , current_best_corr: 0.6610849932923822 train_loss: 0.15325134992599487
-epoch 97: {'matthews_correlation': 0.6306644810568987} , current_best_corr: 0.6610849932923822 train_loss: 0.05813060328364372
-epoch 98: {'matthews_correlation': 0.6356176940747067} , current_best_corr: 0.6610849932923822 train_loss: 0.05737119913101196
-epoch 99: {'matthews_correlation': 0.6356176940747067} , current_best_corr: 0.6610849932923822 train_loss: 0.05779136344790459
+epoch 96: {'matthews_correlation': 0.6331219341866674} , current_best_corr: 0.6581805893879898 train_loss: 0.057534683495759964
+epoch 97: {'matthews_correlation': 0.6206837048829764} , current_best_corr: 0.6581805893879898 train_loss: 0.057706814259290695
+epoch 98: {'matthews_correlation': 0.6281691768918801} , current_best_corr: 0.6581805893879898 train_loss: 0.05744687840342522
+epoch 99: {'matthews_correlation': 0.6256673855627156} , current_best_corr: 0.6581805893879898 train_loss: 0.0582236722111702
 ```
 
 ```bash
@@ -157,14 +157,18 @@ beta: 0.0001
 gemma: 0.001
 ...
   0%|          | 0/33 [00:00<?, ?it/s]
- 15%|█▌        | 5/33 [00:00<00:00, 43.66it/s]
- 30%|███       | 10/33 [00:00<00:00, 45.00it/s]
- 45%|████▌     | 15/33 [00:00<00:00, 43.80it/s]
- 61%|██████    | 20/33 [00:00<00:00, 42.54it/s]
- 76%|███████▌  | 25/33 [00:00<00:00, 40.27it/s]
- 91%|█████████ | 30/33 [00:00<00:00, 42.00it/s]
-100%|██████████| 33/33 [00:00<00:00, 43.15it/s]
-epoch 99: {'matthews_correlation': 0.6356176940747067} [32m, current_best_corr:[0m 0.6610849932923822 train_loss: 0.05779136344790459
+  9%|▉         | 3/33 [00:00<00:01, 27.53it/s]
+ 21%|██        | 7/33 [00:00<00:00, 30.12it/s]
+ 30%|███       | 10/33 [00:00<00:00, 28.58it/s]
+ 39%|███▉      | 13/33 [00:00<00:00, 27.65it/s]
+ 48%|████▊     | 16/33 [00:00<00:00, 27.95it/s]
+ 58%|█████▊    | 19/33 [00:00<00:00, 25.45it/s]
+ 67%|██████▋   | 22/33 [00:00<00:00, 25.99it/s]
+ 76%|███████▌  | 25/33 [00:00<00:00, 24.67it/s]
+ 88%|████████▊ | 29/33 [00:01<00:00, 25.53it/s]
+100%|██████████| 33/33 [00:01<00:00, 27.68it/s]
+100%|██████████| 33/33 [00:01<00:00, 27.01it/s]
+epoch 99: {'matthews_correlation': 0.6256673855627156}, current_best_corr: 0.6581805893879898 train_loss: 0.0582236722111702
 ```
 
 

@@ -5,4 +5,3 @@ __pycache__/
 *.pyc
 *_cache/
 .DS_Store
-natural_language_understanding_logs/
